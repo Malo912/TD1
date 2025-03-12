@@ -14,15 +14,25 @@ This project is a command-line application built using the **Kotlin** programmin
 
 1. **Clone the Repository**:
    ```bash
-   git clone git clone https://github.com/Malo912/TD1.git
+   git clone https://github.com/Malo912/TD1.git
+   ```
+2. **Navigate to the Project Folder**:
+   ```bash
+   cd TD1
+   ```
+3. **Build and Run the Application**:
+   - If you have IntelliJ IDEA, open the project and run it.
+   - Alternatively, use the Kotlin command line tools to compile and run the project.
 
-2. **Navigate to the Project Folder:**:
-    ```bash
-    cd TD1
-3.**Build and Run the Application**:
-   If you have IntelliJ IDEA, open the project and run it.
-     -Alternatively, use the Kotlin command line tools to compile and run the project.
-     -For compiling and running via terminal:
-     ```bash
-     kotlinc main.kt -include-runtime -d LibraryManagement.jar
-     java -jar LibraryManagement.jar
+   For compiling and running via terminal:
+   ```bash
+   kotlinc main.kt -include-runtime -d LibraryManagement.jar
+   java -jar LibraryManagement.jar
+   ```
+
+## Technologies Used
+
+- **Kotlin**: The programming language used to develop the application.
+- **Command-Line Interface (CLI)**: The application is designed for execution in the terminal.
+
+
