@@ -29,9 +29,15 @@ class main {
             when (choice) {
                 1 -> {
 
-                    println("What is the title of the book ?")
-                    val title = readLine()
-                    library.addBook(title)
+                    println("What is the title of the book?")
+                    val title = readLine() ?: ""
+                    println("Who is the author of the book?")
+                    val author = readLine() ?: ""
+                    val id = bookList.size + 1  // Générer un nouvel ID automatiquement
+                    val available = true  // Livre disponible par défaut
+
+                    library.addBook(title, author, id, available)
+
                 }
                 2 -> {
                     library.removeBook()

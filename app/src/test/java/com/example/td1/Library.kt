@@ -2,17 +2,21 @@ package com.example.td1
 
 class Library (var bookList: MutableList<Book>){
 
-    fun addBook(title: String){
-
-        for (book in bookList){
-            if (book.title==title){
-                bookList.add(book)
-                println("The book $book has been haded")
+    fun addBook(title: String, author: String, id: Int, available: Boolean) {
+        // Vérifier si le livre existe déjà
+        for (book in bookList) {
+            if (book.title == title) {
+                println("The book '$title' already exists in the library.")
+                return
             }
         }
 
-
+        // Créer et ajouter le nouveau livre
+        val newBook = Book(title, author, id, available)
+        bookList.add(newBook)
+        println("The book '$title' by $author has been added to the library.")
     }
+
 
     fun removeBook(){
 
@@ -71,14 +75,18 @@ class Library (var bookList: MutableList<Book>){
 
     fun returnBook(){
 
-        println("What is the title of the book ?")
-        val title = readLine()
-        println("Who is the Author of the book ?")
-        val author = readLine()
+
+        println("What is the title of the book?")
+        val title = readLine() ?: ""
+        println("Who is the author of the book?")
+        val author = readLine() ?: ""
+        val id = bookList.size + 1  // Générer un nouvel ID automatiquement
+        val available = true  // Livre disponible par défaut
+
 
         for (book in bookList){
             if (book.title == title && book.author==author){
-                addBook()
+                addBook(title, author, id, available)
                 println("the book $title has been returned")
             }
         }
