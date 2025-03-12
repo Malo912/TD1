@@ -20,9 +20,9 @@ This project is a command-line application built using the **Kotlin** programmin
     ```bash
     cd TD1
 3.**Build and Run the Application**:
-If you have IntelliJ IDEA, open the project and run it.
-  -Alternatively, use the Kotlin command line tools to compile and run the project.
-  -For compiling and running via terminal:
-  ```bash
-  kotlinc main.kt -include-runtime -d LibraryManagement.jar
-  java -jar LibraryManagement.jar
+   If you have IntelliJ IDEA, open the project and run it.
+     -Alternatively, use the Kotlin command line tools to compile and run the project.
+     -For compiling and running via terminal:
+     ```bash
+     kotlinc main.kt -include-runtime -d LibraryManagement.jar
+     java -jar LibraryManagement.jar
